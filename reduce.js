@@ -1,8 +1,10 @@
 // write a simple example of reduce
 
 let arr = [1, 2, 3, 4, 5];
-let sum = arr.reduce((acc, num) => {
-    return acc + num;
+let sum = arr.reduce((prev, current) => {
+    console.log('prev', prev);
+    console.log('current', current);
+    return previous + current;
 }, 0);
 
 console.log(sum);
