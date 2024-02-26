@@ -21,9 +21,11 @@ let data = {
     }
 }
 
-console.log(data.Sophia.study[1].secondary[1].location);
+// console.log(data.Sophia.study[1].secondary[1].location);
 let { Sophia: { study: [, { secondary: [, { location }]}]}} = data;
-console.log(location);
+let {Sophia:{study:[,{secondary:[,{location:locationName}]}]}} = data;
+
+// console.log(locationName);
 
 
 // task-2: console .log  output: Petersburg, Herry
@@ -53,7 +55,7 @@ let students = {
     }
 }
 
-console.log(students[2222].address.city, students[3333].name);
+// console.log(students[2222].address.city, students[3333].name);
 
 
 // task-3 : access and then show habluder adda
@@ -82,5 +84,49 @@ let data2 = {
         ]
 }
 
-console.log(data2.data[0].bookDetails.name);
-console.log(data2.data[1].bookCategory);
+// console.log(data2.data[0].bookDetails.name);
+// console.log(data2.data[1].bookCategory);
+
+// Practice task
+
+// 1
+
+const array = [1,3,5,7,9];
+
+const even = array.map(even => even+1);
+// console.log(even);
+
+// 2
+
+const arr = [33,50,79,78,90,101,30];
+const filter = arr.filter(num => num%10==0);
+// console.log(filter);
+
+// 3
+
+const instructor = [
+    {name: 'Nodi', age:28, position:'Senior'},
+    {name: 'Satranga', age:27, position:'Junior'},
+    {name: 'Ganga', age:26, position:'Senior'},
+    
+
+]
+
+const seniorBhai = instructor.filter(object => object.position == 'Senior');
+// console.log(seniorBhai);
+
+const people = [
+    {name: 'Meena', age:20},
+    {name: 'Rina', age:15},
+    {name: 'Suchorita', age:22},
+];
+
+const ageSum = people.reduce((prev,curr) => {
+
+    return prev + curr.age;
+},0)
+
+console.log('The cummulated age is' + ' ' + ageSum);
+
+
+

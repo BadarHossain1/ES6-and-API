@@ -7,7 +7,7 @@ const products = [
 ]
 
 class Product{
-    country = 'Bangladesh';
+    
     constructor(name){
         this.name = name;
     }
@@ -18,8 +18,8 @@ class Product{
 }
 
 const lenovo = new Product('le le le lenovo');
-// console.log(lenovo);
-// lenovo.speak('Oba kita kou?');
+ console.log(lenovo);
+lenovo.speak('Oba kita kou?');
 
 
 class Teacher{
@@ -32,6 +32,7 @@ class Teacher{
     }
 }
 
-const RanaSir = new Teacher('Rana sir', 'Math');
+const RanaSir = new Teacher('Rana sir', 'Data Communication');
+console.log(RanaSir)
 
 
